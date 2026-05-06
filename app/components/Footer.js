@@ -82,15 +82,21 @@ export default function Footer() {
 
             <div>
               <h4 style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px", paddingBottom: "10px", borderBottom: `1px solid ${brd}` }}>{t("footer_courses")}</h4>
-              {["sub_general", "sub_business", "sub_kids", "sub_ielts", "sub_cambridge", "sub_eiken"].map(k => (
-                <a key={k} href="#" style={{ display: "block", fontSize: "13px", color: dim, padding: "5px 0", textDecoration: "none" }}>{t(k)}</a>
+              {[
+                { key: "sub_general", href: "/courses/general" },
+                { key: "sub_business", href: "/courses/business" },
+                { key: "sub_kids", href: "/courses/kids" },
+                { key: "sub_ielts", href: "/courses/ielts" },
+                { key: "sub_cambridge", href: "/courses/cambridge" },
+                { key: "sub_eiken", href: "/courses/eiken" },
+              ].map(x => (
+                <a key={x.key} href={x.href} style={{ display: "block", fontSize: "13px", color: dim, padding: "5px 0", textDecoration: "none" }}>{t(x.key)}</a>
               ))}
             </div>
 
             <div>
               <h4 style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px", paddingBottom: "10px", borderBottom: `1px solid ${brd}` }}>{t("footer_info")}</h4>
               {[
-                { key: "footer_about", href: "/about" },
                 { key: "footer_teachers", href: "/teachers" },
                 { key: "footer_tuition", href: "/tuition" },
                 { key: "footer_access", href: "/access" },
