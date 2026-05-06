@@ -3,8 +3,21 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "Michael's English School - Osaka",
-  description: "English conversation school in Tennoji and Furuichi, Osaka",
+  title: "Michael's English School - English Conversation School in Osaka",
+  description: "Michael's English School offers native-speaker English lessons in Tennoji and Furuichi, Osaka. General, Business, Kids, IELTS, Cambridge, and EIKEN courses available. Trial lesson welcome!",
+  keywords: "English school Osaka, English conversation Osaka, eikaiwa Osaka, IELTS Osaka, business English Osaka, kids English Osaka, Tennoji English school, native speaker English teacher",
+  icons: {
+    icon: "/MES-Bear.png",
+    apple: "/MES-Bear.png",
+  },
+  openGraph: {
+    title: "Michael's English School - English Conversation School in Osaka",
+    description: "Native-speaker English lessons in Tennoji and Furuichi, Osaka. General, Business, Kids, IELTS, Cambridge & EIKEN courses. Trial lesson welcome!",
+    url: "https://michaelsenglishschool.com",
+    siteName: "Michael's English School",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
