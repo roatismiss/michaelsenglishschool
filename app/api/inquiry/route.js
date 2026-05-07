@@ -1,10 +1,6 @@
 import { Resend } from "resend";
 
 const RECIPIENTS = [
-  "info@michaelsenglishschool.com",
-  "akiko@michaelsenglishschool.com",
-  "nili@michaelsenglishschool.com",
-  "michael@michaelsenglishschool.com",
   "ayonezawa1970@gmail.com",
   "nilirobertsatmes@gmail.com",
 ];
@@ -19,7 +15,7 @@ export async function POST(req) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Michael's English School <info@michaelsenglishschool.com>",
+      from: "Michael's English School <onboarding@resend.dev>",
       to: RECIPIENTS,
       replyTo: email,
       subject: `New Inquiry from ${name}`,
