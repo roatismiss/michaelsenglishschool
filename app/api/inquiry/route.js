@@ -1,7 +1,5 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const RECIPIENTS = [
   "info@michaelsenglishschool.com",
   "akiko@michaelsenglishschool.com",
@@ -13,6 +11,7 @@ const RECIPIENTS = [
 
 export async function POST(req) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { name, email, phone, message } = await req.json();
 
     if (!name || !email) {
