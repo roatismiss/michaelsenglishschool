@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 
 const RECIPIENTS = [
+  "michael@michaelsenglishschool.com",
   "ayonezawa1970@gmail.com",
   "nilirobertsatmes@gmail.com",
 ];
