@@ -112,6 +112,20 @@ export default function InquiryPage(){
       {/* ═══ FORM ═══ */}
       <section style={{background:C.primaryLight,padding:m?"48px 24px":"64px 40px"}}>
         <div style={{maxWidth:"640px",margin:"0 auto"}}>
+          {status==="sent"?(
+            <div style={{background:"#fff",borderRadius:"20px",padding:m?"40px 24px":"60px 40px",boxShadow:"0 4px 24px rgba(67,97,238,0.06)",textAlign:"center"}}>
+              <div style={{width:"72px",height:"72px",borderRadius:"50%",background:"#dcfce7",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px"}}>
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:m?"24px":"32px",fontWeight:700,color:C.dark,marginBottom:"16px"}}>Thank You!</h2>
+              <p style={{fontSize:"15px",lineHeight:1.8,color:C.textLight,marginBottom:"8px"}}>We've received your inquiry and will get back to you as soon as possible.</p>
+              <p style={{fontSize:"14px",color:C.textMuted,marginBottom:"32px"}}>Usually within 1 business day.</p>
+              <a href="/" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"14px 32px",borderRadius:"12px",background:C.primary,color:"#fff",fontSize:"14px",fontWeight:600,textDecoration:"none"}}>
+                Back to Home
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          ):(
           <Reveal>
             <form onSubmit={handleSubmit} style={{background:"#fff",borderRadius:"20px",padding:m?"28px 24px":"40px 40px",boxShadow:"0 4px 24px rgba(67,97,238,0.06)"}}>
 
@@ -173,6 +187,7 @@ export default function InquiryPage(){
               </button>
             </form>
           </Reveal>
+          )}
         </div>
       </section>
 
