@@ -9,6 +9,7 @@ const en = {
   nav_blog: "Blog",
   nav_study: "Study in Japan",
   nav_inquiry_btn: "Inquiry",
+  nav_dive: "Dive Into English",
 
   // Nav dropdown
   sub_general: "General Class",

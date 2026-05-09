@@ -9,6 +9,7 @@ const ja = {
   nav_blog: "ブログ",
   nav_study: "日本留学",
   nav_inquiry_btn: "お問い合わせ",
+  nav_dive: "ダイブイングリッシュ",
 
   // Nav dropdown
   sub_general: "一般英会話クラス",
