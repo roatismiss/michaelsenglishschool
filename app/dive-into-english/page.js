@@ -230,56 +230,36 @@ export default function DiveIntoEnglishPage(){
         img{display:block}
       `}</style>
 
-      {/* ═══ HERO ═══ */}
-      <section style={{background:"#fff",position:"relative",overflow:"hidden"}}>
-        {!m&&<>
-          <div style={{position:"absolute",left:"12%",top:0,bottom:"10px",width:"1px",background:"#e8ecf2",zIndex:1}}/>
-          <div style={{position:"absolute",left:"calc(31% - 16px)",top:0,bottom:"10px",width:"1px",background:"#e8ecf2",zIndex:1}}/>
-          <div style={{position:"absolute",left:"calc(31% + 16px)",top:0,bottom:"10px",width:"1px",background:"#e8ecf2",zIndex:1}}/>
-          <div style={{position:"absolute",right:"12%",top:0,bottom:"10px",width:"1px",background:"#e8ecf2",zIndex:1}}/>
-        </>}
-        <div style={{display:"flex",flexDirection:m?"column":"row",position:"relative",zIndex:2,padding:m?"40px 24px 24px":"60px 48px 40px"}}>
-          <div style={{flex:m?"none":"0 0 52%",position:"relative"}}>
-            {m&&<div style={{position:"absolute",top:"80px",right:0}}><RotatingAsterisk size={68}/></div>}
-            <div style={{fontSize:"10px",fontWeight:700,letterSpacing:"0.25em",textTransform:"uppercase",color:C.primary,marginBottom:"14px",animation:"fadeUp 0.6s ease-out both"}}>{c.badge}</div>
-            <p style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:m?"17px":"clamp(17px,1.8vw,22px)",color:C.textMuted,marginBottom:"10px",animation:"fadeUp 0.6s ease-out 0.1s both"}}>{c.tagline}</p>
-            <h1 style={{fontWeight:900,fontSize:m?"clamp(2.8rem,13vw,4.2rem)":"clamp(3.8rem,6.5vw,6.5rem)",lineHeight:0.9,letterSpacing:"-0.04em",color:C.dark,animation:"fadeUp 0.8s ease-out 0.2s both"}}>
-              {c.title[0]}<br/>{c.title[1]}<br/>{c.title[2]}
-            </h1>
-            <p style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:m?"18px":"clamp(20px,2.2vw,26px)",color:C.primary,marginTop:m?"14px":"18px",marginBottom:m?"20px":"28px",animation:"fadeUp 0.8s ease-out 0.35s both"}}>{c.subtitle}</p>
-            <div style={{display:"flex",gap:"12px",flexWrap:"wrap",animation:"fadeUp 0.8s ease-out 0.45s both"}}>
-              <a href="/inquiry" className="btn-primary" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"13px 28px",borderRadius:"10px",fontSize:"14px",fontWeight:700,textDecoration:"none"}}>
-                {c.cta1} <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-              <a href="#includes" className="btn-outline" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"13px 28px",borderRadius:"10px",fontSize:"14px",fontWeight:700,textDecoration:"none"}}>{c.cta2}</a>
-            </div>
-          </div>
-          {!m&&(
-            <div style={{flex:"0 0 48%",display:"flex",flexDirection:"column",justifyContent:"space-between",paddingLeft:"40px"}}>
-              <div style={{display:"flex",justifyContent:"center",alignItems:"center",flex:1}}><RotatingAsterisk size={120}/></div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",justifyContent:"flex-end"}}>
-                <a href="/" style={{fontSize:"13px",fontWeight:600,color:C.primary,textDecoration:"none"}}>Home</a>
-                <span style={{color:C.textMuted}}>/</span>
-                <span style={{fontSize:"13px",fontWeight:600,letterSpacing:"0.08em",color:C.text,textTransform:"uppercase"}}>Dive Into English</span>
-              </div>
-            </div>
-          )}
-        </div>
-        <div style={{height:"10px",background:C.primary}}/>
-      </section>
+      {/* ═══ HERO FULL SCREEN ═══ */}
+      <section style={{position:"relative",height:"100svh",minHeight:"600px",overflow:"hidden",display:"flex",flexDirection:"column",justifyContent:"flex-end"}}>
+        <img src="/dive/underwater.jpeg" alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",objectPosition:"center 35%"}}/>
+        <div style={{position:"absolute",inset:0,background:"linear-gradient(to top, rgba(26,26,46,0.96) 0%, rgba(26,26,46,0.4) 55%, rgba(26,26,46,0.05) 100%)"}}/>
 
-      {/* ═══ HERO IMAGE ═══ */}
-      <section style={{background:"#fff",padding:m?"24px 24px 0":"40px 48px 0"}}>
-        <div style={{maxWidth:"1000px",margin:"0 auto",borderRadius:"20px",overflow:"hidden",boxShadow:"0 8px 32px rgba(67,97,238,0.1)",position:"relative"}}>
-          <img src="/dive/underwater.jpeg" alt="Dive Into English" style={{width:"100%",height:m?"220px":"440px",objectFit:"cover",objectPosition:"center 35%"}}/>
-          <div style={{position:"absolute",bottom:0,left:0,right:0,background:"linear-gradient(to top,rgba(26,26,46,0.85),transparent)",padding:m?"16px 20px":"24px 32px",display:"flex",gap:m?"16px":"32px",flexWrap:"wrap"}}>
-            {[c.stat1,c.stat2,c.stat3].map(([n,l])=>(
-              <div key={l}>
-                <div style={{fontSize:m?"13px":"16px",fontWeight:800,color:"#fff"}}>{n}</div>
-                <div style={{fontSize:"10px",color:"rgba(255,255,255,0.55)",letterSpacing:"0.1em",textTransform:"uppercase"}}>{l}</div>
-              </div>
-            ))}
+        <div style={{position:"relative",zIndex:2,padding:m?"28px 24px 0":"48px 56px 0"}}>
+          <div style={{fontSize:"10px",fontWeight:700,letterSpacing:"0.25em",textTransform:"uppercase",color:"rgba(255,255,255,0.55)",marginBottom:"12px",animation:"fadeUp 0.6s ease-out 0.1s both"}}>{c.badge}</div>
+          <p style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:m?"16px":"clamp(18px,1.8vw,24px)",color:"rgba(255,255,255,0.6)",marginBottom:"14px",animation:"fadeUp 0.7s ease-out 0.2s both"}}>{c.tagline}</p>
+          <h1 style={{fontWeight:900,fontSize:m?"clamp(3rem,12vw,4.5rem)":"clamp(4rem,7vw,7rem)",lineHeight:0.9,letterSpacing:"-0.03em",color:"#fff",marginBottom:"20px",animation:"fadeUp 0.8s ease-out 0.3s both"}}>
+            {c.title[0]}<br/>{c.title[1]}<br/>{c.title[2]}
+          </h1>
+          <p style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:m?"17px":"clamp(18px,2vw,24px)",color:C.accent,marginBottom:"32px",maxWidth:"600px",animation:"fadeUp 0.8s ease-out 0.4s both"}}>{c.subtitle}</p>
+          <div style={{display:"flex",gap:"12px",flexWrap:"wrap",animation:"fadeUp 0.8s ease-out 0.5s both"}}>
+            <a href="#contact-form" className="btn-primary" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"14px 32px",borderRadius:"10px",fontSize:"15px",fontWeight:700,textDecoration:"none"}}>
+              {c.cta1} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#includes" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"14px 28px",borderRadius:"10px",border:"1px solid rgba(255,255,255,0.25)",color:"rgba(255,255,255,0.85)",fontSize:"15px",fontWeight:600,textDecoration:"none",backdropFilter:"blur(8px)",background:"rgba(255,255,255,0.05)"}}>
+              {c.cta2}
+            </a>
           </div>
+        </div>
+
+        {/* Stats strip */}
+        <div style={{position:"relative",zIndex:2,background:"rgba(255,255,255,0.05)",backdropFilter:"blur(12px)",borderTop:"1px solid rgba(255,255,255,0.08)",padding:m?"14px 24px":"18px 56px",marginTop:"32px",display:"flex",gap:m?"20px":"48px",flexWrap:"wrap"}}>
+          {[c.stat1,c.stat2,c.stat3].map(([n,l])=>(
+            <div key={l}>
+              <div style={{fontSize:m?"14px":"18px",fontWeight:800,color:"#fff"}}>{n}</div>
+              <div style={{fontSize:"10px",color:"rgba(255,255,255,0.4)",letterSpacing:"0.1em",textTransform:"uppercase",marginTop:"2px"}}>{l}</div>
+            </div>
+          ))}
         </div>
       </section>
 
