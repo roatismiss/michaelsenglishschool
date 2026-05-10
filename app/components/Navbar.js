@@ -85,7 +85,6 @@ export default function Navbar() {
     { key: "nav_access", href: "/access" },
     { key: "nav_inquiry", href: "/inquiry" },
     { key: "nav_blog", href: "/blog" },
-    { key: "nav_dive", href: "/dive-into-english" },
   ];
 
   if (m) {
